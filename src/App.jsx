@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 // Corrected import: Changed LoaderCircle to Loader2
 import { Heart, Loader2, AlertTriangle } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react'; // Import Analytics
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Import SpeedInsights
 
 // Define the backend API URL
 // Make sure this matches the port your backend is running on!
@@ -180,6 +182,10 @@ const InspirationalLoveApp = () => {
           Shrey
         </motion.p>
       </motion.div>
+
+      {/* Vercel Analytics and Speed Insights Components */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 };
